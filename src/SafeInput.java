@@ -67,7 +67,6 @@ public class SafeInput {
                     pipe.nextLine();
                 } else {
                     System.out.printf("Expected [%d-%d], got %d\n", low, high, num);
-                    pipe.nextLine();
                 }
             } else {
                 trash = pipe.nextLine();
@@ -111,9 +110,9 @@ public class SafeInput {
             IO.print(prompt);
             if (pipe.hasNextLine()) {
                 String str = pipe.nextLine();
-                if (str.equalsIgnoreCase("y"))
+                if (str.equalsIgnoreCase("y")) {
                     retBool = done = true;
-                else if (str.equalsIgnoreCase("n")) {
+                } else if (str.equalsIgnoreCase("n")) {
                     retBool = false;
                     done = true;
                 } else {
@@ -138,6 +137,7 @@ public class SafeInput {
                     retString = str;
                 } else {
                     IO.println("Expected format " + format + ", got \"" + str + "\"");
+                    pipe.nextLine();
                 }
             }
         } while (!done);
