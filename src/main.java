@@ -7,7 +7,7 @@ void main() {
     Scanner in = new Scanner(System.in);
     do {
         IO.println();
-        if (!lastWasPrint) PrintList(false); // do not print if print was last menu function
+        if (!lastWasPrint) PrintList(false); // do not print if last print was  menu function
         String option = SafeInput.getRegExString(in,
                 "Menu option? [A]dd [D]elete [I]nsert [P]rint [Q]uit: ",
                 "^(?i)a|d|i|p|q$",
